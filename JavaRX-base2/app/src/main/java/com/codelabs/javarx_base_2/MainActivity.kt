@@ -236,7 +236,10 @@ class MainActivity : AppCompatActivity() {
         //skip, skipLast, take, takeLast
         val result: Disposable =
             Observable.just("Ваня", "Петя", "Вова", "Степа", "Рома", "Коля", "Вася", "Рома", "Ваня")
-                .skip(3)
+//                .skip(3)
+//                .skipLast(3)
+//                .take(3)
+                .takeLast(4)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
